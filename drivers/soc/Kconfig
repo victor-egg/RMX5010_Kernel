@@ -1,0 +1,95 @@
+# SPDX-License-Identifier: GPL-2.0-only
+menu "SOC (System On Chip) specific Drivers"
+
+source "drivers/soc/actions/Kconfig"
+source "drivers/soc/amlogic/Kconfig"
+source "drivers/soc/apple/Kconfig"
+source "drivers/soc/aspeed/Kconfig"
+source "drivers/soc/atmel/Kconfig"
+source "drivers/soc/bcm/Kconfig"
+source "drivers/soc/canaan/Kconfig"
+source "drivers/soc/fsl/Kconfig"
+source "drivers/soc/fujitsu/Kconfig"
+source "drivers/soc/hisilicon/Kconfig"
+source "drivers/soc/imx/Kconfig"
+source "drivers/soc/ixp4xx/Kconfig"
+source "drivers/soc/litex/Kconfig"
+source "drivers/soc/loongson/Kconfig"
+source "drivers/soc/mediatek/Kconfig"
+source "drivers/soc/microchip/Kconfig"
+source "drivers/soc/nuvoton/Kconfig"
+source "drivers/soc/pxa/Kconfig"
+source "drivers/soc/qcom/Kconfig"
+source "drivers/soc/renesas/Kconfig"
+source "drivers/soc/rockchip/Kconfig"
+source "drivers/soc/samsung/Kconfig"
+source "drivers/soc/sifive/Kconfig"
+source "drivers/soc/starfive/Kconfig"
+source "drivers/soc/sunxi/Kconfig"
+source "drivers/soc/tegra/Kconfig"
+source "drivers/soc/ti/Kconfig"
+source "drivers/soc/ux500/Kconfig"
+source "drivers/soc/versatile/Kconfig"
+source "drivers/soc/xilinx/Kconfig"
+
+#ifdef OPLUS_FEATURE_TRACE_SENSOR
+source "drivers/soc/oplus/oplus_trace_sensor/Kconfig"
+#endif /* OPLUS_FEATURE_TRACE_SENSOR */
+
+#ifdef OPLUS_FEATURE_MM_FEEDBACK
+source "drivers/soc/oplus/multimedia/Kconfig"
+#endif /* OPLUS_FEATURE_MM_FEEDBACK */
+
+#ifdef OPLUS_TRACKPOINT_REPORT
+source "drivers/soc/oplus/trackpoint/Kconfig"
+#endif /* OPLUS_TRACKPOINT_REPORT */
+
+#ifdef OPLUS_FEATURE_BOOT
+source "drivers/soc/oplus/boot/Kconfig"
+#endif /* OPLUS_FEATURE_BOOT */
+
+
+#ifdef OPLUS_FEATURE_MODEM_MINIDUMP
+source "drivers/soc/oplus/mdmrst/Kconfig"
+#endif /*OPLUS_FEATURE_MODEM_MINIDUMP*/
+
+#ifdef OPLUS_FEATURE_TP_BASIC
+source "drivers/soc/oplus/device_info/Kconfig"
+#endif /* OPLUS_FEATURE_TP_BASIC */
+#ifdef OPLUS_FEATURE_QCOM_WATCHDOG
+source "drivers/soc/oplus/boot/qcom_watchdog/Kconfig"
+#endif
+
+#ifdef OPLUS_UFS_DRIVER
+source "drivers/soc/oplus/storage/common/ufs_oplus_dbg/Kconfig"
+source "drivers/soc/oplus/storage/common/oplus_uprobe/Kconfig"
+source "drivers/soc/oplus/storage/common/storage_log/Kconfig"
+source "drivers/soc/oplus/storage/common/oplus_f2fslog_storage/Kconfig"
+source "drivers/soc/oplus/storage/common/wq_dynamic_priority/Kconfig"
+source "drivers/soc/oplus/storage/common/file_record/Kconfig"
+#endif
+
+#ifdef CONFIG_OPLUS_FEATURE_STORAGE_IO_METRICS
+source "drivers/soc/oplus/storage/common/io_metrics/Kconfig"
+#endif
+
+#ifdef OPLUS_FEATURE_DFT
+source "drivers/soc/oplus/dft/Kconfig"
+#endif /* OPLUS_FEATURE_DFT */
+
+#ifdef OPLUS_SUBSYS_SLEEP_MONITOR
+source "drivers/soc/oplus/power/subsys_sleep_monitor/oplus_subsys_sleep_monitor/Kconfig"
+#endif /* OPLUS_SUBSYS_SLEEP_MONITOR */
+
+#ifdef OPLUS_FEATURE_OSML_MONITOR
+source "drivers/soc/oplus/osml_monitor/Kconfig"
+#endif /* OPLUS_FEATURE_OSML_MONITOR */
+
+#ifdef OPLUS_FEATURE_WAKER_IDENTIFY
+source "kernel/oplus_cpu/waker_identify/Kconfig"
+#endif /* OPLUS_FEATURE_WAKER_IDENTIFY */
+
+#ifdef OPLUS_FEATURE_FPGA
+source "drivers/soc/oplus/fpga_notify/Kconfig"
+#endif /* OPLUS_FEATURE_FPGA */
+endmenu
