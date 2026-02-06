@@ -199,4 +199,5 @@ elif [ "${LOCALVERSION+set}" != "set" ]; then
 	scm_version="$(scm_version --short)"
 fi
 
-echo "${KERNELVERSION}${file_localversion}${config_localversion}${LOCALVERSION}${scm_version}"
+res=$(echo "-android15-8-gf4dc45704e54-abogki446052083-4k" | sed 's/-dirty//g')
+echo "${KERNELVERSION}${file_localversion}${config_localversion}${LOCALVERSION}"
